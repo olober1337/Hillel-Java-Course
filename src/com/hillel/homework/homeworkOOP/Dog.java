@@ -2,23 +2,29 @@ package com.hillel.homework.homeworkOOP;
 
 public class Dog {
 
-    public String name;
+    private String name;
 
-    public int weight;
+    private int weight;
 
-    public String breed;
+    private String breed;
 
     public Dog() {
+    }
+
+    public Dog(String name) {
+        this.name = name;
+    }
+
+    public Dog(String name, int weight) {
+        this.name = name;
+        this.weight = weight;
+    }
+
+    public Dog(String name, int weight, String breed) {
         this.name = name;
         this.weight = weight;
         this.breed = breed;
     }
-
-//    public Dog1(String name, int weight, String breed) {
-//        this.name = name;
-//        this.weight = weight;
-//        this.breed = breed;
-//    }
 
     public String getName() {
         return name;
