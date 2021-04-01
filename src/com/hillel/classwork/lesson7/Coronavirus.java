@@ -4,12 +4,14 @@ import java.util.Random;
 
 public class Coronavirus {
 
-    private boolean isCureResearched = false;
+    private final int RESEARCH_LIMIT_INDEX = 100;
+
+    private boolean isCureResearched;
 
     private String coronavirusType;
 
 //false by default
-    private boolean isCuredAndDestroyed = false;
+    private boolean isCuredAndDestroyed;
 
     public Coronavirus(String coronavirusType) {
         this.coronavirusType = coronavirusType;
@@ -32,7 +34,7 @@ public class Coronavirus {
     }
 
     public void attack(Human human) {
-        if(human.getHealth() > 0 || (isCureResearched = false)) {
+        if(human.getHealth() > 0 && (isCuredAndDestroyed == false)) {
             int damage = getRandomInt(0, human.getHealth());
             human.setHealth(damage);
         }
@@ -55,5 +57,17 @@ public class Coronavirus {
                 "coronavirusType='" + coronavirusType + '\'' +
                 ", isCuredAndDestroyed=" + isCuredAndDestroyed +
                 '}';
+    }
+
+    public void scientistImpactToDefeatCoronavirus (int covidResearchIndex) {
+        boolean isDefeated = covidResearchIndex >= RESEARCH_LIMIT_INDEX;
+
+        if (isDefeated) {
+            System.out.println("HHHHHHEEEEYYYYYY COVID DEFEATED !!!!!!");
+            this.setCuredAndDestroyed(true);
+        } else {
+            System.out.println("HHHHHHEEEEYYYYYY NOT DEFEATED YET!!!!!! STILL WAIT FOR RESEARCH, STATUS : " + covidResearchIndex);
+        }
+
     }
 }

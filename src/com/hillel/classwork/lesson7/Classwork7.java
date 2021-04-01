@@ -84,24 +84,38 @@ public class Classwork7 {
         hillel_emergency_service.checkIsHumanAliveAndCure(danil);
         hillel_emergency_service.checkIsHumanAliveAndCure(vika);
 
-        covidResearchIndex = covidResearchIndex + einstein.performResearch();
-        covidResearchIndex = covidResearchIndex + esmeralda.performResearch();
-        covidResearchIndex = covidResearchIndex + alfred.performResearch();
+        updateResearchIndexByScientist(einstein);
+        updateResearchIndexByScientist(esmeralda);
+        updateResearchIndexByScientist(alfred);
+//
+//        covidResearchIndex = covidResearchIndex + einstein.performResearch();
+//        covidResearchIndex = covidResearchIndex + esmeralda.performResearch();
+//        covidResearchIndex = covidResearchIndex + alfred.performResearch();
 
-        isCovidDefeated(covid);
+        System.out.println("covidResearchIndex now is : " + covidResearchIndex);
+
+        covid.scientistImpactToDefeatCoronavirus(covidResearchIndex);
+
+        System.out.println("FIFTH WAVE OF CORONA");
+
+        covid.attack(vadym);
+        covid.attack(danil);
+        covid.attack(vika);
+
+//        isCovidDefeated(covid);
     }
 
-    private static void isCovidDefeated (Coronavirus coronavirus) {
-        boolean isDefeated = covidResearchIndex >= 100;
-
-        if (isDefeated) {
-            System.out.println("HHHHHHEEEEYYYYYY COVID DEFEATED !!!!!!");
-            coronavirus.setCuredAndDestroyed(true);
-        } else {
-            System.out.println("HHHHHHEEEEYYYYYY NOT DEFEATED YET!!!!!! STILL WAIT FOR RESEARCH, STATUS : " + covidResearchIndex);
-        }
-
-    }
+//    private static void isCovidDefeated (Coronavirus coronavirus) {
+//        boolean isDefeated = covidResearchIndex >= 100;
+//
+//        if (isDefeated) {
+//            System.out.println("HHHHHHEEEEYYYYYY COVID DEFEATED !!!!!!");
+//            coronavirus.setCuredAndDestroyed(true);
+//        } else {
+//            System.out.println("HHHHHHEEEEYYYYYY NOT DEFEATED YET!!!!!! STILL WAIT FOR RESEARCH, STATUS : " + covidResearchIndex);
+//        }
+//
+//    }
 
     private static void coronaAttack(Human human) {
 
@@ -147,6 +161,10 @@ public class Classwork7 {
         return randomHealthDamage.ints(min, max)
                 .findFirst()
                 .getAsInt();
+    }
+
+    private static void updateResearchIndexByScientist (Scientist scientist){
+        covidResearchIndex = covidResearchIndex + scientist.performResearch();
     }
 }
 

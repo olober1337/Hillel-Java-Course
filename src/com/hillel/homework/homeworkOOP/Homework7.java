@@ -47,5 +47,6 @@ public class Homework7 {
         dog.setBreed("Labrador Retriever");
         System.out.println(dog.getBreed());
 
+//      Можно также использовать метод toString() чтобы улучшить код
     }
 }
