@@ -3,18 +3,21 @@ package com.hillel.homework.homework8;
 public class House {
     public static void main(String[] args) {
 
-//      Здесь я решил не создавать пустые конструкторы(кроме console), так как это ухудшило бы код.
+//      Здесь я решил не создавать пустые конструкторы(кроме как в console, чтобы поиграться с инкапсуляцией), так как это ухудшило бы код.
 //      Поэтому были созданы конструкторы со всеми параметрами и, также, метод toString.
 
         Chair chair = new Chair("Chair Master", 10, "black", 5);
         System.out.println(chair);
 
-        Console console = new Console();
+        Console console = new Console("Playstation 5", 5, "white", 10);
+        System.out.println(console);
 
-        console.setBrand("Playstation 5");
-        console.setWeight(5);
-        console.setColour("white");
-        console.setRatingOnWebsite(10);
+        Console newConsole = new Console();
+
+        console.setBrand("Xbox");
+        console.setWeight(6);
+        console.setColour("black");
+        console.setRatingOnWebsite(9);
 
         System.out.println(console);
 

@@ -1,7 +1,5 @@
 package com.hillel.homework.homework8;
 
-import java.sql.SQLOutput;
-
 public class Console {
 
     private String brand;
@@ -12,7 +10,14 @@ public class Console {
 
     private int ratingOnWebsite;
 
-    public Console(){
+    public Console() {
+    }
+
+    public Console(String brand, int weight, String colour, int ratingOnWebsite) {
+        this.brand = brand;
+        this.weight = weight;
+        this.colour = colour;
+        this.ratingOnWebsite = ratingOnWebsite;
     }
 
     public String getBrand() {
@@ -20,12 +25,11 @@ public class Console {
     }
 
     public void setBrand(String brand) {
-
-        if (brand.equalsIgnoreCase("playstation 5")) {
-            this.brand = "Playstation 5";
-            System.out.println("It's a marvelous choice to buy such a great console !!!");
+        if (brand.equalsIgnoreCase("Playstation 5")) {
+            System.out.println("It's a great choice !!!");
+            this.brand = brand;
         } else {
-            System.out.println("Well, it's a good one too !!!");
+            System.out.println("It's a good one too !!!");
             this.brand = brand;
         }
     }

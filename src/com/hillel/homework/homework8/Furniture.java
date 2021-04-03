@@ -12,7 +12,7 @@ public class Furniture {
 
     private double rating;
 
-    private int distanceToTheShop;
+    private int distanceToTheShopInKm;
 
     private int deliveryDate;
 
@@ -28,70 +28,42 @@ public class Furniture {
     }
 
     public Furniture(String overallRatingOfTheFurniture, int price) {
-        this.overallRatingOfTheFurniture = overallRatingOfTheFurniture;
+        this("8 out of 10");
         this.price = price;
     }
 
     public Furniture(String overallRatingOfTheFurniture, int price, long shopPhoneNumber) {
-        this.overallRatingOfTheFurniture = overallRatingOfTheFurniture;
-        this.price = price;
+        this("8 out of 10", 100000);
         this.shopPhoneNumber = shopPhoneNumber;
     }
 
     public Furniture(String overallRatingOfTheFurniture, int price, long shopPhoneNumber, int weight) {
-        this.overallRatingOfTheFurniture = overallRatingOfTheFurniture;
-        this.price = price;
-        this.shopPhoneNumber = shopPhoneNumber;
+        this("8 out of 10", 100000, 934563213);
         this.weight = weight;
     }
 
     public Furniture(String overallRatingOfTheFurniture, int price, long shopPhoneNumber, int weight, double rating) {
-        this.overallRatingOfTheFurniture = overallRatingOfTheFurniture;
-        this.price = price;
-        this.shopPhoneNumber = shopPhoneNumber;
-        this.weight = weight;
+        this("8 out of 10", 100000, 934563213, 100);
         this.rating = rating;
     }
 
-    public Furniture(String overallRatingOfTheFurniture, int price, long shopPhoneNumber, int weight, double rating, int distanceToTheShop) {
-        this.overallRatingOfTheFurniture = overallRatingOfTheFurniture;
-        this.price = price;
-        this.shopPhoneNumber = shopPhoneNumber;
-        this.weight = weight;
-        this.rating = rating;
-        this.distanceToTheShop = distanceToTheShop;
+    public Furniture(String overallRatingOfTheFurniture, int price, long shopPhoneNumber, int weight, double rating, int distanceToTheShopInKm) {
+        this("8 out of 10", 100000, 934563213, 100, 8.13);
+        this.distanceToTheShopInKm = distanceToTheShopInKm;
     }
 
     public Furniture(String overallRatingOfTheFurniture, int price, long shopPhoneNumber, int weight, double rating, int distanceToTheShop, int deliveryDate) {
-        this.overallRatingOfTheFurniture = overallRatingOfTheFurniture;
-        this.price = price;
-        this.shopPhoneNumber = shopPhoneNumber;
-        this.weight = weight;
-        this.rating = rating;
-        this.distanceToTheShop = distanceToTheShop;
+        this("8 out of 10", 100000, 934563213, 100, 8.13, 20);
         this.deliveryDate = deliveryDate;
     }
 
     public Furniture(String overallRatingOfTheFurniture, int price, long shopPhoneNumber, int weight, double rating, int distanceToTheShop, int deliveryDate, long courierPhoneNumber) {
-        this.overallRatingOfTheFurniture = overallRatingOfTheFurniture;
-        this.price = price;
-        this.shopPhoneNumber = shopPhoneNumber;
-        this.weight = weight;
-        this.rating = rating;
-        this.distanceToTheShop = distanceToTheShop;
-        this.deliveryDate = deliveryDate;
+        this("8 out of 10", 100000, 934563213, 100, 8.13, 20, 25);
         this.courierPhoneNumber = courierPhoneNumber;
     }
 
     public Furniture(String overallRatingOfTheFurniture, int price, long shopPhoneNumber, int weight, double rating, int distanceToTheShop, int deliveryDate, long courierPhoneNumber, int howManyWasPurchased) {
-        this.overallRatingOfTheFurniture = overallRatingOfTheFurniture;
-        this.price = price;
-        this.shopPhoneNumber = shopPhoneNumber;
-        this.weight = weight;
-        this.rating = rating;
-        this.distanceToTheShop = distanceToTheShop;
-        this.deliveryDate = deliveryDate;
-        this.courierPhoneNumber = courierPhoneNumber;
+        this("8 out of 10", 100000, 934563213, 100, 8.13, 20, 25, 964512789);
         this.howManyWasPurchased = howManyWasPurchased;
     }
 
@@ -135,12 +107,12 @@ public class Furniture {
         this.rating = rating;
     }
 
-    public int getDistanceToTheShop() {
-        return distanceToTheShop;
+    public int getDistanceToTheShopInKm() {
+        return distanceToTheShopInKm;
     }
 
-    public void setDistanceToTheShop(int distanceToTheShop) {
-        this.distanceToTheShop = distanceToTheShop;
+    public void setDistanceToTheShopInKm(int distanceToTheShopInKm) {
+        this.distanceToTheShopInKm = distanceToTheShopInKm;
     }
 
     public int getDeliveryDate() {
