@@ -25,13 +25,7 @@ public class Console {
     }
 
     public void setBrand(String brand) {
-        if (brand.equalsIgnoreCase("Playstation 5")) {
-            System.out.println("It's a great choice !!!");
             this.brand = brand;
-        } else {
-            System.out.println("It's a good one too !!!");
-            this.brand = brand;
-        }
     }
 
     public int getWeight() {
