@@ -23,10 +23,10 @@ public class ExtraPoints {
 
         Scanner scanner = new Scanner(System.in);
 
-        int c = scanner.nextInt();
+        int d = scanner.nextInt();
         int sum = 0;
-        for (int d = 1; d <= c; d++) {
-            sum = sum + d;
+        for (int e = 1; e <= d; e++) {
+            sum = sum + e;
         }
         System.out.println("Here is the sum of all numbers : " + sum);
     }
