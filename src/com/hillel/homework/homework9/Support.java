@@ -1,5 +1,9 @@
 package com.hillel.homework.homework9;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
 public final class Support extends User{
 
     public Support(String name, String lastName, String email, String password, String sex, String country) {
@@ -7,68 +11,25 @@ public final class Support extends User{
 
     }
 
-    @Override
-    public String getName() {
-        return super.getName();
-    }
+    public static boolean isFileContainsString (String toCheck) throws IOException {
 
-    @Override
-    public void setName(String name) {
-        super.setName(name);
-    }
+        System.out.println("Enter your text for checking please : ");
 
-    @Override
-    public String getLastName() {
-        return super.getLastName();
-    }
+        FileReader fileReader = new FileReader(pathToFile);
+        System.out.println("Text checking started");
+        Scanner scanner = new Scanner(fileReader);
 
-    @Override
-    public void setLastName(String lastName) {
-        super.setLastName(lastName);
-    }
+        while (scanner.hasNextLine()) {
+            String textLine = scanner.nextLine();
+            if (textLine.equals(toCheck)) {
+                System.out.println("File contains " + toCheck);
+                return true;
+            }
+        }
 
-    @Override
-    public String getEmail() {
-        return super.getEmail();
-    }
-
-    @Override
-    public void setEmail(String email) {
-        super.setEmail(email);
-    }
-
-    @Override
-    public String getPassword() {
-        return super.getPassword();
-    }
-
-    @Override
-    public void setPassword(String password) {
-        super.setPassword(password);
-    }
-
-    @Override
-    public String getSex() {
-        return super.getSex();
-    }
-
-    @Override
-    public void setSex(String sex) {
-        super.setSex(sex);
-    }
-
-    @Override
-    public String getCountry() {
-        return super.getCountry();
-    }
-
-    @Override
-    public void setCountry(String country) {
-        super.setCountry(country);
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
+        fileReader.close();
+        scanner.close();
+        System.out.println("File does not contain " + toCheck);
+        return false;
     }
 }

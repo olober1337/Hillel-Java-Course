@@ -93,14 +93,13 @@ public class User {
 
     }
 
-    public static void textWriter () throws IOException {
-
-        Scanner myScanner = new Scanner(System.in);
-        System.out.println("Enter your text please : ");
-        String myEnteredText = myScanner.nextLine();
+    public void textWriter () throws IOException {
 
         FileWriter myFileWriter = new FileWriter(pathToFile);
-        myFileWriter.write(myEnteredText);
+        System.out.println("Enter your text please : ");
+        Scanner myScanner = new Scanner(System.in);
+
+        myFileWriter.write(String.valueOf(myScanner));
 
         myScanner.close();
         myFileWriter.close();
