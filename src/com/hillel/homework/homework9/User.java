@@ -5,7 +5,11 @@ import java.util.Scanner;
 
 public class User {
 
+    public static final Scanner myScanner = new Scanner(System.in);
+
     static String pathToFile = "C:\\Users\\mcram\\Desktop\\Homework9\\myTextFile.txt";
+
+    public static File newFile = new File(pathToFile);
 
     private String name;
     private String lastName;
@@ -86,23 +90,20 @@ public class User {
     public final void textReader () {
 
         System.out.println("Enter your text please : ");
-        Scanner myScanner = new Scanner(System.in);
         String myText = myScanner.nextLine();
         System.out.println("Your text is : ".concat(myText));
-        myScanner.close();
 
     }
 
     public void textWriter () throws IOException {
 
-        FileWriter myFileWriter = new FileWriter(pathToFile);
+        FileWriter myFileWriter = new FileWriter(newFile);
         System.out.println("Enter your text please : ");
-        Scanner myScanner = new Scanner(System.in);
+        String enteredText = myScanner.nextLine();
 
-        myFileWriter.write(String.valueOf(myScanner));
-
-        myScanner.close();
+        myFileWriter.write(enteredText);
         myFileWriter.close();
 
+        System.out.println("Your text has been written to the file!!!");
     }
 }

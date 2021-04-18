@@ -10,19 +10,26 @@ public class People {
         Support support = new Support("Martha", "Smith", "martha.smith@gmail.com", "321", "female", "Canada");
         Admin admin = new Admin("James", "Blaskovitz", "test@gmail.com", "213", "male", "Ukraine");
 
-        user.textReader();
-        user.textWriter();
+        System.out.println("Class User is running now");
+        checkingUsers(user);
+        System.out.println("Class Support is running now");
+        checkingUsers(support);
+        System.out.println("Class Admin is running now");
+        checkingUsers(admin);
 
-        if (user instanceof User) {
-            System.out.println(user);
-        }
-        if (support instanceof Support) {
-            String  stringChecker = "This string is in File";
-            boolean stringIsInFile = Support.isFileContainsString(stringChecker);
-            System.out.println(stringIsInFile);
-        }
-        if (admin instanceof Admin) {
-            Admin.fileDeletionValidOrNot();
+        User.myScanner.close();
+    }
+
+
+    private static void checkingUsers (User user) throws IOException {
+
+        if (user instanceof Support){
+            Support.isFileContainsString(((Support) user).checkingStringInFile());
+        } else if (user instanceof Admin) {
+            Admin.fileDeletionValidOrNot(Admin.isFileContainsString(((Admin) user).checkingStringInFile()));
+        } else if (user != null) {
+            user.textReader();
+            user.textWriter();
         }
     }
 }

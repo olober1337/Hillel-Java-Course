@@ -11,24 +11,25 @@ public final class Support extends User{
 
     }
 
+    public String checkingStringInFile () {
+
+        System.out.println("Type the text to check in file : ");
+        return myScanner.nextLine();
+    }
+
     public static boolean isFileContainsString (String toCheck) throws IOException {
 
-        System.out.println("Enter your text for checking please : ");
+        FileReader fileReader = new FileReader(newFile);
+        Scanner fileScanner = new Scanner(fileReader);
 
-        FileReader fileReader = new FileReader(pathToFile);
-        System.out.println("Text checking started");
-        Scanner scanner = new Scanner(fileReader);
-
-        while (scanner.hasNextLine()) {
-            String textLine = scanner.nextLine();
+        while (fileScanner.hasNextLine()) {
+            String textLine = fileScanner.nextLine();
             if (textLine.equals(toCheck)) {
                 System.out.println("File contains " + toCheck);
                 return true;
             }
         }
-
         fileReader.close();
-        scanner.close();
         System.out.println("File does not contain " + toCheck);
         return false;
     }
