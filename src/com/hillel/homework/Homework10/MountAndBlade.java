@@ -31,7 +31,7 @@ public class MountAndBlade {
         Infantry infantry = new Infantry("high", 1000, "King Harlus division", 60, "Kingdom of Rhodok", 70);
         Cavalry cavalry = new Cavalry("very high", 2000, "King Graveth", 80, "Kingdom of Swadia", 100);
 
-        System.out.println(khadjitKaganate + "\n");
+        System.out.println("Welcome, Khadjit Kaganate!!! \n");
         khadjitKaganate.gatherArmy();
         khadjitKaganate.attackEnemy();
         khadjitKaganate.improveCastle();
@@ -41,7 +41,7 @@ public class MountAndBlade {
         khadjitKaganate.clothes();
         System.out.println("\n");
 
-        System.out.println(rhodok + "\n");
+        System.out.println("Welcome, Kingdom of Rhodok!!! \n");
         rhodok.gatherArmy();
         rhodok.attackEnemy();
         rhodok.startTheFeast();
@@ -51,7 +51,7 @@ public class MountAndBlade {
         rhodok.clothes();
         System.out.println("\n");
 
-        System.out.println(swadia + "\n");
+        System.out.println("Welcome, Kingdom of Swadia!!! \n");
         swadia.gatherArmy();
         swadia.attackEnemy();
         swadia.trainInfantry();
@@ -61,7 +61,7 @@ public class MountAndBlade {
         swadia.clothes();
         System.out.println("\n");
 
-        System.out.println(archers);
+        System.out.println("Here come our brave archers!!! \n");
         archers.march();
         archers.sing();
         archers.shoot();
@@ -73,7 +73,7 @@ public class MountAndBlade {
         archers.entertainment();
         System.out.println("\n");
 
-        System.out.println(cavalry);
+        System.out.println("Here come our brave cavalry!!! \n");
         cavalry.march();
         cavalry.sing();
         cavalry.attackEnemy();
@@ -85,7 +85,7 @@ public class MountAndBlade {
         cavalry.entertainment();
         System.out.println("\n");
 
-        System.out.println(infantry);
+        System.out.println("Here come our brave infantry!!! \n");
         infantry.march();
         infantry.sing();
         infantry.retreat();
