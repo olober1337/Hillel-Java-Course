@@ -30,11 +30,9 @@ public abstract class Units extends Troops {
     @Override
     public void march() {
         super.march();
-        System.out.println("The units are marching!!!");
     }
 
     public void sing() {
-        System.out.println("The units started singing a war song!!!");
     }
 
     @Override

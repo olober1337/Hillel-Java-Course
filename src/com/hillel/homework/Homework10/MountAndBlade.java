@@ -42,5 +42,41 @@ public class MountAndBlade {
         swadia.clothes();
         System.out.println("\n");
 
+        System.out.println(archers);
+        archers.march();
+        archers.sing();
+        archers.shoot();
+        archers.putOn();
+        archers.putOnArmor();
+        archers.putOff();
+        archers.putOffArmor();
+        archers.rest();
+        archers.entertainment();
+        System.out.println("\n");
+
+        System.out.println(cavalry);
+        cavalry.march();
+        cavalry.sing();
+        cavalry.attackEnemy();
+        cavalry.putOn();
+        cavalry.putOnArmor();
+        cavalry.putOff();
+        cavalry.putOffArmor();
+        cavalry.rest();
+        cavalry.entertainment();
+        System.out.println("\n");
+
+        System.out.println(infantry);
+        infantry.march();
+        infantry.sing();
+        infantry.retreat();
+        infantry.putOn();
+        infantry.putOnArmor();
+        infantry.putOff();
+        infantry.putOffArmor();
+        infantry.rest();
+        infantry.entertainment();
+        System.out.println("\n");
+
     }
 }

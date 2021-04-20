@@ -27,7 +27,6 @@ public abstract class Troops {
     }
 
     public void march() {
-        System.out.println("The troops are marching!!!");
     }
 
     @Override

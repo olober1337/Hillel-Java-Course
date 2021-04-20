@@ -39,6 +39,10 @@ public final class Cavalry extends Units implements Ammunition, Armor, Rest{
         System.out.println("The cavalry started singing a war song!!!");
     }
 
+    public void attackEnemy() {
+        System.out.println("The cavalry has started attacking enemy!!!");
+    }
+
     public void followTheCommander() {
         System.out.println("The cavalry is following the commander!!!");
     }
