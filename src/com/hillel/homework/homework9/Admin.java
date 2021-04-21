@@ -1,6 +1,6 @@
 package com.hillel.homework.homework9;
 
-import java.io.FileNotFoundException;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
@@ -21,7 +21,7 @@ public final class Admin extends User{
 
     public static boolean isFileContainsString (String toCheck) throws IOException {
 
-        FileReader fileReader = new FileReader(pathToFile);
+        FileReader fileReader = new FileReader(newFile);
         Scanner fileScanner = new Scanner(fileReader);
 
         while (fileScanner.hasNextLine()) {
@@ -36,21 +36,33 @@ public final class Admin extends User{
         return false;
     }
 
-    public static String fileDeletionValidOrNot(boolean fileContainsString) {
+    public static void fileDeletionValidOrNot(boolean fileContainsString) {
 
         System.out.println("Please check if file contains the entered text. If contains, write : 'contains'");
 
-        Scanner newScanner = new Scanner(System.in);
+        String checkEnteredText = myScanner.nextLine();
 
-        String checkEnteredText = newScanner.nextLine();
+        if (checkEnteredText.equalsIgnoreCase("contains")) {
 
-        if (checkEnteredText.equalsIgnoreCase("contains")){
-            newFile.delete();
-            System.out.println("The file has been deleted");
-            return "The file has been deleted";
-        } else {
-            System.out.println("We've checked and the file does not contain the string :) ");
-            return "We've checked and the file does not contain the string :)";
+            try {
+                File file = new File(pathToFile);
+                if (file.delete()) {
+                    System.out.println(file.getName() + " is deleted!");
+                } else {
+                    System.out.println("We've checked and the file does not contain the string :) ");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
+//
+//        if (checkEnteredText.equalsIgnoreCase("contains")) {
+//            File fileChecker = new File(pathToFile);
+//            fileChecker.delete();
+//            System.out.println("The file has been deleted");
+//        } else {
+//            System.out.println("We've checked and the file does not contain the string :) ");
+//        }
+//        myScanner.close();
     }
 }

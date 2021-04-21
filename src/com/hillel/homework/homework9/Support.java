@@ -29,6 +29,7 @@ public final class Support extends User{
                 return true;
             }
         }
+        fileScanner.close();
         fileReader.close();
         System.out.println("File does not contain " + toCheck);
         return false;

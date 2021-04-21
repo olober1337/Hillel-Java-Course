@@ -9,7 +9,7 @@ public class User {
 
     static String pathToFile = "C:\\Users\\mcram\\Desktop\\Homework9\\myTextFile.txt";
 
-    public static File newFile = new File(pathToFile);
+    public static final File newFile = new File(pathToFile);
 
     private String name;
     private String lastName;
@@ -97,7 +97,7 @@ public class User {
 
     public void textWriter () throws IOException {
 
-        FileWriter myFileWriter = new FileWriter(newFile);
+        FileWriter myFileWriter = new FileWriter(pathToFile);
         System.out.println("Enter your text please : ");
         String enteredText = myScanner.nextLine();
 
