@@ -37,7 +37,7 @@ public class Main {
 
         System.out.println(myNewList + "\n");
 
-        System.out.println("Adding 3 values in the beginning :".concat("\n"));
+        System.out.println("Adding 3 values in the beginning :".concat("\n") + myNewList + "\n");
 
         Run run1 = new Run(1);
         Run run2 = new Run(2);
@@ -47,24 +47,23 @@ public class Main {
         myNewList.add(0, run2);
         myNewList.add(0, run3);
 
-        System.out.println(myNewList + "\n");
 
         Ride ride1 = new Ride(1);
         Ride ride2 = new Ride(2);
         Ride ride3 = new Ride(3);
 
-        System.out.println("Replacing the last 3 values :".concat("\n"));
+        System.out.println("Replacing the last 3 values :".concat("\n") + myNewList + "\n");
 
         myNewList.set(6, ride1);
         myNewList.set(7, ride2);
         myNewList.set(8, ride3);
 
-        System.out.println(myNewList + "\n");
-
         return myNewList;
     }
 
     public static List<Object> iteratorOperations (List<Object> myNewList) {
+
+        System.out.println("My list before values removal :".concat("\n") + myNewList + "\n");
 
         Iterator<Object> iterator = myNewList.iterator();
 
@@ -84,7 +83,7 @@ public class Main {
                 if (run > 2) {
                     iterator.remove();
                 }
-            } else if (value instanceof Ride) {
+            } else if (value instanceof Ride){
                 ride++;
                 if (ride > 2) {
                     iterator.remove();
@@ -92,8 +91,7 @@ public class Main {
             }
         }
 
-        System.out.println("My list after values removal :".concat("\n"));
-        System.out.println(myNewList);
+        System.out.println("My list after values removal :".concat("\n") + myNewList + "\n");
 
         return myNewList;
     }
