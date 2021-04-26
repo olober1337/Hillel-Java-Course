@@ -5,17 +5,24 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Task1 {
+
+    /*Задача 1:
+    Создайте программу-опросник(Можно  вынести  в  отдельный класс с  необходимым(и) методом(ами)).
+    Данная программа должна просить ввести пользователя свое имя, после чего проводить опрос(достаточно 2-3 вопроса).
+    Введенные данные сохраняются в виде ключ-значение, где ключ - это имя пользователя, а значение это данные в виде тоже ключ-значение(где ключ - это вопрос, а значение - ответ).
+    Тип значения ответа на  вопрос указать на  свое усмотрение.После проведенного опроса программа должна записать результат в файл.
+     */
 
     public static Scanner answer = new Scanner(System.in);
 
     public static String pathName = "C:\\Users\\mcram\\Desktop\\Homework12\\myTextFile.txt";
 
-    public static HashMap<String, HashMap<String, String>> myLinkedHashMap = new LinkedHashMap<>();
-    public static HashMap<String, String> myLinkedHashMap2 = new LinkedHashMap<>();
-
+    public static Map<String, HashMap<String, String>> myLinkedHashMap = new LinkedHashMap<>();
+    public static Map<String, String> myLinkedHashMap2 = new LinkedHashMap<>();
 
     public static void main(String[] args) throws IOException {
 
@@ -23,7 +30,7 @@ public class Task1 {
 
     }
 
-    public static void questionsAndAnswers (HashMap<String, HashMap<String, String>> myLinkedHashMap) throws IOException {
+    public static void questionsAndAnswers (Map<String, HashMap<String, String>> myLinkedHashMap) throws IOException {
 
         String question1 = "Enter your name please : ";
         System.out.println(question1);
@@ -45,7 +52,7 @@ public class Task1 {
         myLinkedHashMap2.put(question3, answer3);
         myLinkedHashMap2.put(question4, answer4);
 
-        myLinkedHashMap.put(answer1, myLinkedHashMap2);
+        myLinkedHashMap.put(answer1, (HashMap<String, String>) myLinkedHashMap2);
 
         answer.close();
 

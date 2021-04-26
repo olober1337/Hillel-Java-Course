@@ -36,33 +36,17 @@ public final class Admin extends User{
         return false;
     }
 
-    public static void fileDeletionValidOrNot(boolean fileContainsString) {
+    public static void fileDeletionValidOrNot(boolean isFileContainsString) {
 
         System.out.println("Please check if file contains the entered text. If contains, write : 'contains'");
-
         String checkEnteredText = myScanner.nextLine();
+        myScanner.close();
 
-        if (checkEnteredText.equalsIgnoreCase("contains")) {
-
-            try {
-                File file = new File(pathToFile);
-                if (file.delete()) {
-                    System.out.println(file.getName() + " is deleted!");
-                } else {
-                    System.out.println("We've checked and the file does not contain the string :) ");
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        if (isFileContainsString == checkEnteredText.equalsIgnoreCase("contains")) {
+            newFile.delete();
+            System.out.println("The file has been deleted");
+        } else {
+            System.out.println("We've checked and the file does not contain the string :) ");
         }
-//
-//        if (checkEnteredText.equalsIgnoreCase("contains")) {
-//            File fileChecker = new File(pathToFile);
-//            fileChecker.delete();
-//            System.out.println("The file has been deleted");
-//        } else {
-//            System.out.println("We've checked and the file does not contain the string :) ");
-//        }
-//        myScanner.close();
     }
 }
