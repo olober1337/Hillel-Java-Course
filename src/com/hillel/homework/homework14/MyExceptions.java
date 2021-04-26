@@ -7,13 +7,20 @@ import java.util.List;
 
 public class MyExceptions {
 
-    public static void fileException() throws IOException {
+    /*Здесь решил прописать логику вызова ошибки, чтобы самому понимать почему и из-за чего она вызывается.
+    Создайте класс, в которому будут 3 отдельных метода, логика которых будет вызывать 3 разные “проверяемые”(checked) ошибки.
+    Ошибки можете вызвать принудительно в ходе какой-то логики(не принципиально)*/
+
+    public void firstException() throws IOException {
+
         FileWriter myFileWriter = new FileWriter("myTextFile.txt");
         myFileWriter.write("Hello World!");
         myFileWriter.close();
+
     }
 
-    public static void arithmeticException() {
+    public void secondException() throws ArithmeticException{
+
         try {
             int num1 = 20;
             int num2 = 0;
@@ -22,14 +29,17 @@ public class MyExceptions {
         } catch (ArithmeticException e) {
             System.out.println("You cannot divide a number by zero!");
         }
+
     }
 
-    public static void outOfBoundsException() {
+    public void thirdException() throws IndexOutOfBoundsException{
+
         try {
             List<Integer> newList = new ArrayList<>(5);
             newList.get(10);
-        } catch (ArrayIndexOutOfBoundsException e) {
+        } catch (IndexOutOfBoundsException e) {
             System.out.println("Array Index is out of Bounds!");
+
         }
     }
 }
