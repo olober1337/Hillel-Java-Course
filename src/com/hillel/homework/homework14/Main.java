@@ -13,8 +13,6 @@ public class Main {
         г) try(with resources)-catch-finally;
         д) try-finally (в каждой конструкции try должны быть вызовы 3х методов промежуточного класса с разными ошибками).*/
 
-
-
         MyMiddleClassForExceptions myMiddleClassForExceptions = new MyMiddleClassForExceptions();
 
         try {
