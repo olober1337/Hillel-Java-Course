@@ -19,7 +19,7 @@ public class MyExceptions {
 
     }
 
-    public void secondException() throws ArithmeticException{
+    public void secondException() {
 
         try {
             int num1 = 20;
@@ -32,7 +32,7 @@ public class MyExceptions {
 
     }
 
-    public void thirdException() throws IndexOutOfBoundsException{
+    public void thirdException() {
 
         try {
             List<Integer> newList = new ArrayList<>(5);
