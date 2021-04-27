@@ -2,6 +2,7 @@ package com.hillel.homework.homework9;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -32,21 +33,24 @@ public final class Admin extends User{
             }
         }
         fileReader.close();
+        fileScanner.close();
         System.out.println("File does not contain " + toCheck);
         return false;
     }
 
-    public static void fileDeletionValidOrNot(boolean isFileContainsString) {
+    public static void fileDeletionValidOrNot(boolean isFileContainsString) throws IOException {
 
         System.out.println("Please check if file contains the entered text. If contains, write : 'contains'");
         String checkEnteredText = myScanner.nextLine();
-        myScanner.close();
 
-        if (isFileContainsString == checkEnteredText.equalsIgnoreCase("contains")) {
-            newFile.delete();
-            System.out.println("The file has been deleted");
+        if (checkEnteredText.equalsIgnoreCase("contains")) {
+            FileWriter fileWriter = new FileWriter(newFile);
+            fileWriter.write("");
+            fileWriter.close();
+            System.out.println("Your file has been successfully deleted!");
         } else {
-            System.out.println("We've checked and the file does not contain the string :) ");
+            System.out.println("We've checked carefully and your file does not contain the string you've entered :)");
         }
+
     }
 }

@@ -17,7 +17,7 @@ public final class Support extends User{
         return myScanner.nextLine();
     }
 
-    public static boolean isFileContainsString (String toCheck) throws IOException {
+    public static boolean isFileContainsString(String toCheck) throws IOException {
 
         FileReader fileReader = new FileReader(newFile);
         Scanner fileScanner = new Scanner(fileReader);

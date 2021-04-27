@@ -21,7 +21,7 @@ public class People {
     }
 
 
-    private static void checkingUsers (User user) throws IOException {
+    private static void checkingUsers(User user) throws IOException {
 
         if (user instanceof Support){
             Support.isFileContainsString(((Support) user).checkingStringInFile());
