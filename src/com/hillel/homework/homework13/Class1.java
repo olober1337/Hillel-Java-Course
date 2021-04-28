@@ -4,46 +4,43 @@ import java.util.*;
 
 public class Class1 {
 
-    private List newList;
-    private Set newSet;
-    private Map newMap;
+    private List newList1;
+    private Set newSet1;
+    private Map newMap1;
 
-    public Class1(List newList, Set newSet, Map newMap) {
-        this.newList = newList;
-        this.newSet = newSet;
-        this.newMap = newMap;
+    public Class1() {
     }
 
-    public List getNewList() {
-        return newList;
+    public List getNewList1() {
+        return newList1;
     }
 
-    public void setNewList(List newList) {
-        this.newList = newList;
+    public void setNewList1(List newList1) {
+        this.newList1 = newList1;
     }
 
-    public Set getNewSet() {
-        return newSet;
+    public Set getNewSet1() {
+        return newSet1;
     }
 
-    public void setNewSet(Set newSet) {
-        this.newSet = newSet;
+    public void setNewSet1(Set newSet1) {
+        this.newSet1 = newSet1;
     }
 
-    public Map getNewMap() {
-        return newMap;
+    public Map getNewMap1() {
+        return newMap1;
     }
 
-    public void setNewMap(Map newMap) {
-        this.newMap = newMap;
+    public void setNewMap1(Map newMap1) {
+        this.newMap1 = newMap1;
     }
 
     @Override
     public String toString() {
         return "Task2Class1{" +
-                "newList=" + newList +
-                ", newSet=" + newSet +
-                ", newMap=" + newMap +
+                "newList1=" + newList1 +
+                ", newSet1=" + newSet1 +
+                ", newMap1=" + newMap1 +
                 '}';
     }
 }
